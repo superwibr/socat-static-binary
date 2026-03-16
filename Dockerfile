@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:trixie
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -18,7 +18,7 @@ RUN mkdir /build
 ADD . /build
 
 ENV MUSL_VERSION      1.1.16
-ENV SOCAT_VERSION     1.7.3.2
+ENV SOCAT_VERSION     1.8.1.1
 ENV NCURSES_VERSION   6.0
 ENV READLINE_VERSION  7.0
 ENV OPENSSL_VERSION   1.0.2k

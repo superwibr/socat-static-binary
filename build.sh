@@ -4,6 +4,8 @@ set -e
 set -o pipefail
 
 function build_musl() {
+    echo -e "\n\nBuilding musl\n\n"
+
     cd /build
 
     # Download
@@ -18,10 +20,12 @@ function build_musl() {
 }
 
 function build_ncurses() {
+    echo -e "\n\nBuilding ncurses\n\n"
+
     cd /build
 
     # Download
-    curl -LO ftp://invisible-island.net/ncurses/ncurses-${NCURSES_VERSION}.tar.gz
+    curl -LO https://invisible-mirror.net/archives/ncurses/ncurses-${NCURSES_VERSION}.tar.gz
     tar zxvf ncurses-${NCURSES_VERSION}.tar.gz
     cd ncurses-${NCURSES_VERSION}
 
@@ -32,6 +36,8 @@ function build_ncurses() {
 }
 
 function build_readline() {
+    echo -e "\n\nBuilding readline\n\n"
+
     cd /build
 
     # Download
@@ -49,6 +55,8 @@ function build_readline() {
 }
 
 function build_openssl() {
+    echo -e "\n\nBuilding openssl\n\n"
+
     cd /build
 
     # Download
@@ -67,6 +75,8 @@ function build_openssl() {
 }
 
 function build_socat() {
+    echo -e "\n\nBuilding socat\n\n"
+
     cd /build
 
     # Download
